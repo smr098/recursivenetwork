@@ -1,0 +1,22 @@
+/*reset desktop elements*/
+@media (max-width:30rem) {
+    html,body {
+        overflow-y: scroll;
+        overflow-x:hidden!important;;
+        scroll-behavior: smooth;
+        background:transparent!important;
+        margin:0;
+        padding:0;
+    }
+    #desktop * {
+        display:none!important;
+    }
+}
+/*phone styles*/
+@media (min-width:30rem) {
+    /*Begining of mobile elems*/
+    #mobile * {
+        display:none!important;
+    }
+}
+

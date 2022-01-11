@@ -1,0 +1,12 @@
+ErrorDocument 400 http://www.mcgrootnetwork.gq/400.html
+ErrorDocument 401 http://www.mcgrootnetwork.gq/401.html
+ErrorDocument 403 http://www.mcgrootnetwork.gq/403.html
+ErrorDocument 404 http://www.mcgrootnetwork.gq/404.html
+ErrorDocument 503 http://www.mcgrootnetwork.gq/503.html
+
+
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
